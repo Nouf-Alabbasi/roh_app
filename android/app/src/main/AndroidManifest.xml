@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.LthuteLeNna.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".readyGameInstructionScreen"
+            android:exported="false" />
+        <activity
+            android:name=".imagineTimeInstructionScreen"
+            android:exported="false" />
+        <activity
+            android:name=".cowGameInstruction"
+            android:exported="false" />
+        <activity android:name=".WordLevel3Categories" />
+        <activity android:name=".WordsLevel2Categories" />
+        <activity android:name=".WordActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Words_Level_1_Categories" />
+        <activity
+            android:name=".Words_Level_1_Activity"
+            android:label="@string/title_activity_words_level1"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity android:name=".WordsGameLevelSelect" />
+        <activity android:name=".WordsMain" />
+        <activity android:name=".ShapesScreen" />
+        <activity android:name=".ReadyGameLevel2" />
+        <activity android:name=".ColorsScreen" />
+        <activity android:name=".ReadyGameLevel1" />
+        <activity android:name=".ReadyGameLevelSelection" />
+        <activity android:name=".GettingReadyGameHome" />
+        <activity
+            android:name=".LetterGameInstructionScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homeInstruction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LetterGameActivityScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LetterHuntLettersScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LetterGameHomeScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CowGameLevelTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cow_game_level_select"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CowGameLevelOne"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cow_game_numbers_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cow_game_main_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

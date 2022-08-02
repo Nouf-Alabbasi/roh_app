@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WordsMain">
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/wordsGameMenuBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/words_game_background" />
+
+    <LinearLayout
+        android:id="@+id/wordsGameMenuBar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#F8A62B"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/goToCountingGameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            app:srcCompat="@drawable/hut" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/wordsGameStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#F8A62B"
+        android:fontFamily="@font/piedra"
+        android:text="Click here to start!"
+        android:textColor="@color/black"
+        app:cornerRadius="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeScreenGirl"
+        android:layout_width="106dp"
+        android:layout_height="258dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/wordsGameStartButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/girl" />
+
+    <ImageView
+        android:id="@+id/homeScreenSpeechBubble"
+        android:layout_width="218dp"
+        android:layout_height="187dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenGirl"
+        app:layout_constraintEnd_toEndOf="@+id/homeScreenGirl"
+        app:srcCompat="@drawable/speech_bubble" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="157dp"
+        android:layout_height="103dp"
+        android:fontFamily="@font/piedra"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Come create with me!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintEnd_toEndOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintTop_toTopOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <ImageButton
+        android:id="@+id/infoIconImagine"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

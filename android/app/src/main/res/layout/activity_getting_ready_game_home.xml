@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GettingReadyGameHome">
+
+    <ImageView
+        android:id="@+id/readyGameBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/readygame_bg" />
+    <LinearLayout
+        android:id="@+id/cowGameMainScreenMenuBar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#F8A62B"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/goToCountingGameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            app:srcCompat="@drawable/hut" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="165dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/cowGameMainScreenMenuBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/boy" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#F8A62B"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/piedra"
+        android:text="Click here to start!"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="100px"
+        app:layout_constraintBottom_toTopOf="@+id/cowGameMainScreenMenuBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeScreenGirl"
+        android:layout_width="106dp"
+        android:layout_height="258dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/girl" />
+
+    <ImageView
+        android:id="@+id/homeScreenSpeechBubble"
+        android:layout_width="218dp"
+        android:layout_height="187dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenGirl"
+        app:layout_constraintEnd_toEndOf="@+id/homeScreenGirl"
+        app:srcCompat="@drawable/speech_bubble" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="157dp"
+        android:layout_height="103dp"
+        android:fontFamily="@font/piedra"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Help Bontle get ready!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintEnd_toEndOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintTop_toTopOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <ImageButton
+        android:id="@+id/infoIconGetReadyGame"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

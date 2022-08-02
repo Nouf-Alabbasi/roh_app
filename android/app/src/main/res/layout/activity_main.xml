@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9FBF9"
+    tools:context=".Home">
+
+    <ImageView
+        android:id="@+id/homeScreenBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/home_background" />
+
+    <ImageView
+        android:id="@+id/homeScreenGirl"
+        android:layout_width="104dp"
+        android:layout_height="297dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeScreenBackground"
+        app:layout_constraintVertical_bias="0.93"
+        app:srcCompat="@drawable/girl" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="251dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#F8A62B"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/piedra"
+        android:text="Click here to start!"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeScreenSpeechBubble"
+        android:layout_width="268dp"
+        android:layout_height="222dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenGirl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/speech_bubble" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="157dp"
+        android:layout_height="103dp"
+        android:fontFamily="@font/piedra"
+        android:text="Hello \nIthute le nna!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintEnd_toEndOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintTop_toTopOf="@+id/homeScreenSpeechBubble"
+        app:layout_constraintVertical_bias="0.546" />
+
+    <ImageButton
+        android:id="@+id/infoIconHome"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

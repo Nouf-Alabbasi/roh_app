@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LetterGameActivityScreen">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E9FBF9"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_game_main_activity_bg" />
+
+    <ImageView
+        android:id="@+id/wonImageTop"
+        android:layout_width="261dp"
+        android:layout_height="233dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout7"
+        app:srcCompat="@drawable/red" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#F8A62B"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/letterHuntHomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            app:srcCompat="@drawable/hut" />
+
+        <ImageButton
+            android:id="@+id/letterHuntPractice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            app:srcCompat="@drawable/practice_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="372dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="176dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/position1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/letter_spot_blue"
+            android:fontFamily="@font/mitr_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/position2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/letter_spot_blue"
+            android:fontFamily="@font/mitr_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/position3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:background="@drawable/letter_spot_blue"
+            android:fontFamily="@font/mitr_semi_bold"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/letter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="216dp"
+        android:fontFamily="@font/mitr_semi_bold"
+        android:text="A"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/letter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="424dp"
+        android:layout_marginTop="816dp"
+        android:fontFamily="@font/mitr_semi_bold"
+        android:text="B"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/letter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="@font/mitr_semi_bold"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/letter4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="1144dp"
+        android:fontFamily="@font/mitr_semi_bold"
+        android:text="D"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/letter5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginBottom="1044dp"
+        android:fontFamily="@font/mitr_semi_bold"
+        android:text="E"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="@+id/imageView14" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/letterGameConfetti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/confetti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="245dp"
+        android:layout_height="573dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/girl" />
+
+    <ImageView
+        android:id="@+id/wonImageBottom"
+        android:layout_width="204dp"
+        android:layout_height="375dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/girl"
+        app:srcCompat="@drawable/cow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

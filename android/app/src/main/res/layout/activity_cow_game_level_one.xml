@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9FBF9"
+    tools:context=".CowGameLevelOne">
+
+    <ImageView
+        android:id="@+id/cowGameBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cow_game_background" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#F8A62B"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/goToCountingGameMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            android:tint="#8FCF44"
+            app:srcCompat="@drawable/hut" />
+
+        <ImageButton
+            android:id="@+id/practiceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="0.9"
+            android:scaleY=".9"
+            app:srcCompat="@drawable/practice_icon" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/c_game_l2_instruction_background"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Find the cows!" />
+
+    <ImageView
+        android:id="@+id/barn"
+        android:layout_width="0dp"
+        android:layout_height="370dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/barn" />
+
+    <ImageView
+        android:id="@+id/MamaCow"
+        android:layout_width="188dp"
+        android:layout_height="123dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cowGameBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cow_game_main_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos1"
+        android:layout_width="24dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos2"
+        android:layout_width="32dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos3"
+        android:layout_width="32dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos4"
+        android:layout_width="32dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos5"
+        android:layout_width="32dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos6"
+        android:layout_width="39dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos7"
+        android:layout_width="36dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos8"
+        android:layout_width="36dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="368dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos9"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="360dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos10"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos11"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/babyCowPos12"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barn"
+        app:layout_constraintEnd_toEndOf="@+id/barn"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/cowGameConfetti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/confetti"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poetsen_one_regular"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="9"
+        android:textColor="#CF9097"
+        android:textSize="104sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cowGameBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+<!--    found cows      -->
+    <ImageView
+        android:id="@+id/foundCowPos1"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cowGameBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos2"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cowGameBackground"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos1"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos3"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cowGameBackground"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos2"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos4"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cowGameBackground"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos3"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos5"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos6"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos2"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos5"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos7"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos3"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos6"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos8"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos9"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos6"
+        app:layout_constraintStart_toEndOf="@+id/foundCowPos8"
+        app:srcCompat="@drawable/baby_cow" />
+
+    <ImageView
+        android:id="@+id/foundCowPos10"
+        android:layout_width="35dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/foundCowPos8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baby_cow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout-sw600dp/activity_letter_game_home_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level2.xml" value="0.11067708333333333" />
+        <entry key="app/src/main/res/layout/activity_colors_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_cow_game_instruction.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_cow_game_level_one.xml" value="0.25845000354956227" />
+        <entry key="app/src/main/res/layout/activity_cow_game_level_select.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_cow_game_level_two.xml" value="0.20929782148720563" />
+        <entry key="app/src/main/res/layout/activity_cow_game_main_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_cow_game_numbers_screen.xml" value="0.25171661376953125" />
+        <entry key="app/src/main/res/layout/activity_getting_ready_game_home.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_home_instruction.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_imagine_time_instruction_screen.xml" value="0.19170748945595562" />
+        <entry key="app/src/main/res/layout/activity_letter_game_home_screen.xml" value="0.19265639165911153" />
+        <entry key="app/src/main/res/layout/activity_letter_game_instruction_screen.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_letter_game_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_letter_hunt_letters_screen.xml" value="0.192481884057971" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_ready_game_instruction_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_ready_game_level1.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_ready_game_level2.xml" value="0.23586111198418372" />
+        <entry key="app/src/main/res/layout/activity_ready_game_level_selection.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_shapes_screen.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_word.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_word_level3_categories.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_words_game_level_select.xml" value="0.18950869795204936" />
+        <entry key="app/src/main/res/layout/activity_words_level1_categories.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_words_level2_categories.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_words_main.xml" value="0.19610507246376813" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
