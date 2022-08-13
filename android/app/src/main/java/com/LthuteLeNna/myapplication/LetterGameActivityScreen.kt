@@ -149,6 +149,17 @@ class LetterGameActivityScreen : AppCompatActivity() {
                 for (i in 0..2) {
                     if (selectedWord[i].toString().uppercase() != letterPositions[i].text) {
                         isCorrect = false
+                        
+                        // play sound
+                        var audio = resources.getIdentifier(selectedWord, "raw", packageName);
+                        var mediaPlayer = MediaPlayer.create(this, audio)
+
+                        if (mediaPlayer.isPlaying()) {
+                            mediaPlayer.stop();
+                            mediaPlayer.start();
+                        } else {
+                            mediaPlayer.start();
+                        }
                     }
                 }
 
