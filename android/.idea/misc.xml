@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout-land/activity_ready_game_level1.xml" value="0.24911816578483245" />
         <entry key="app/src/main/res/layout-sw600dp/activity_letter_game_home_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_letter_hunt_letters_screen.xml" value="0.34367396593673966" />
         <entry key="app/src/main/res/layout-sw600dp/activity_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level1.xml" value="0.4316702819956616" />
         <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level2.xml" value="0.11067708333333333" />
         <entry key="app/src/main/res/layout/activity_colors_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_cow_game_instruction.xml" value="0.19610507246376813" />
@@ -17,13 +20,13 @@
         <entry key="app/src/main/res/layout/activity_home_instruction.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_imagine_time_instruction_screen.xml" value="0.19170748945595562" />
         <entry key="app/src/main/res/layout/activity_letter_game_home_screen.xml" value="0.19265639165911153" />
-        <entry key="app/src/main/res/layout/activity_letter_game_instruction_screen.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_letter_game_instruction_screen.xml" value="0.3686577838400136" />
         <entry key="app/src/main/res/layout/activity_letter_game_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_letter_hunt_letters_screen.xml" value="0.192481884057971" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_ready_game_instruction_screen.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/activity_ready_game_level1.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_ready_game_level1.xml" value="0.26457597173144876" />
         <entry key="app/src/main/res/layout/activity_ready_game_level2.xml" value="0.23586111198418372" />
         <entry key="app/src/main/res/layout/activity_ready_game_level_selection.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_shapes_screen.xml" value="0.19610507246376813" />

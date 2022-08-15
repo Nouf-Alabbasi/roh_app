@@ -29,14 +29,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/goToCountingGameMain"
+            android:id="@+id/goToBontleGameMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:scaleX="0.9"
-            android:scaleY=".9"
+            android:tint="#8FCF44"
             app:srcCompat="@drawable/hut" />
 
         <ImageButton
@@ -108,6 +106,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageView24"
             app:layout_constraintTop_toTopOf="@+id/imageView24"
             app:srcCompat="@drawable/tshirt_orange" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -145,4 +144,16 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/basket"
+        android:layout_width="289dp"
+        android:layout_height="296dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845"
+        app:srcCompat="@drawable/basket" />
 </androidx.constraintlayout.widget.ConstraintLayout>

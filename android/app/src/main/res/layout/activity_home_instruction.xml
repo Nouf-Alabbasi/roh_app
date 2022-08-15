@@ -110,15 +110,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Refer to the i icon at the opening of every game for specific instructions &amp; learning ideas."
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:text="Refer to the icon at the opening of every game for specific instructions &amp; learning ideas."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

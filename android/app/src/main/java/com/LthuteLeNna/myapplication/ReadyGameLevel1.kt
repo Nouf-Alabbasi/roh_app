@@ -55,6 +55,21 @@ class ReadyGameLevel1 : AppCompatActivity() {
         var audio = resources.getIdentifier("red", "raw", packageName);
         var mediaPlayer = MediaPlayer.create(this, audio);
 
+//        var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName);
+//        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong);
+//        mediaPlayer_wrong.start()
+
+        var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
+        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+//        mediaPlayer_wrong.start()
+        if (mediaPlayer_wrong == null) {
+            mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+            mediaPlayer_wrong.setOnCompletionListener( { mp -> mp.stop() })
+        }
+        if(mediaPlayer_wrong != null) {
+            mediaPlayer_wrong.start();
+        }
+
         if (mode == 0) {
             // select color for level
             var randomColor = Random.nextInt(tshirt_colors.size)
@@ -93,6 +108,13 @@ class ReadyGameLevel1 : AppCompatActivity() {
                         mediaPlayer.start()
                     } catch (e: Exception) {}
 
+//                    try {
+//                        if (mediaPlayer_wrong.isPlaying()) {
+//                            mediaPlayer_wrong.stop()
+//                        }
+//                        mediaPlayer_wrong.start()
+//                    } catch (e: Exception) {}
+
                     mediaPlayer.setOnCompletionListener {
                         var timer = Timer("schedule", true)
                         timer.schedule(4000){
@@ -101,8 +123,17 @@ class ReadyGameLevel1 : AppCompatActivity() {
                             startActivity(intent)
                         }
                     }
-
                 }
+//                else if(i.tag != levelColor)
+//                {
+//                    mediaPlayer_wrong.start()
+////                    try {
+////                        if (mediaPlayer_wrong.isPlaying()) {
+////                            mediaPlayer_wrong.stop()
+////                        }
+////                        mediaPlayer_wrong.start()
+////                    } catch (e: Exception) {}
+//                }
             }
         }
 

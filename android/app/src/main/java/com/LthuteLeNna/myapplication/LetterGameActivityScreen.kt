@@ -2,18 +2,19 @@ package com.LthuteLeNna.myapplication
 
 import android.content.Intent
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.widget.doAfterTextChanged
+import androidx.appcompat.app.AppCompatActivity
 import pl.droidsonroids.gif.GifImageView
 import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.random.Random
+
+//var mediaPlayer: MediaPlayer? = null  //check if we need this to stop the audio
+var mediaPlayer_start: MediaPlayer? = null
 
 class LetterGameActivityScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -143,23 +144,23 @@ class LetterGameActivityScreen : AppCompatActivity() {
                             }
                         }).start()
                     }
+
+//                    // play "oh no" sound
+//                    var audio = resources.getIdentifier("oh_no", "raw", packageName)
+//                    var mediaPlayer_start = MediaPlayer.create(this, audio)
+//                    if (mediaPlayer_start.isPlaying()) {
+//                        mediaPlayer_start.stop();
+//                        mediaPlayer_start.start();
+//                    } else {
+//                        mediaPlayer_start.start();
+//                    }
+//                    mediaPlayer_start.release()
                 }
 
                 var isCorrect = true
                 for (i in 0..2) {
                     if (selectedWord[i].toString().uppercase() != letterPositions[i].text) {
                         isCorrect = false
-                        
-                        // play sound
-                        var audio = resources.getIdentifier(selectedWord, "raw", packageName);
-                        var mediaPlayer = MediaPlayer.create(this, audio)
-
-                        if (mediaPlayer.isPlaying()) {
-                            mediaPlayer.stop();
-                            mediaPlayer.start();
-                        } else {
-                            mediaPlayer.start();
-                        }
                     }
                 }
 
@@ -173,7 +174,7 @@ class LetterGameActivityScreen : AppCompatActivity() {
                             j.setOnClickListener { null }
                         }
 
-                        // play sound
+                         //play sound
                         var audio = resources.getIdentifier(selectedWord, "raw", packageName);
                         var mediaPlayer = MediaPlayer.create(this, audio)
 
@@ -183,6 +184,7 @@ class LetterGameActivityScreen : AppCompatActivity() {
                         } else {
                             mediaPlayer.start();
                         }
+//                        mediaPlayer.release()
 
                         mediaPlayer.setOnCompletionListener {
                             var timer = Timer("schedule", true)
