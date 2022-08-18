@@ -33,6 +33,8 @@ class CowGameLevelTwo : AppCompatActivity() {
         val instructionText: TextView = findViewById(R.id.cGameL2_instructionText)
         val numCowsLeftAfterGame: TextView = findViewById(R.id.foundCowsNumber) as TextView
 
+        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
+        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
 //        var goToHomeButton = findViewById<ImageButton>(R.id.goToCountingGameMain2)
 //        goToHomeButton.setOnClickListener {
 //            startActivity(Intent(this, Home::class.java))

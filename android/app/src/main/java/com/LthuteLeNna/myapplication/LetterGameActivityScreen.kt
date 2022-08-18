@@ -32,6 +32,9 @@ class LetterGameActivityScreen : AppCompatActivity() {
         var wonImageTop = findViewById<ImageView>(R.id.wonImageTop)
         var wonImageBottom = findViewById<ImageView>(R.id.wonImageBottom)
 
+        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
+        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+
         wonImageTop.visibility = View.INVISIBLE
         wonImageBottom.visibility = View.INVISIBLE
 
@@ -144,17 +147,8 @@ class LetterGameActivityScreen : AppCompatActivity() {
                             }
                         }).start()
                     }
+                    mediaPlayer_wrong.start()
 
-//                    // play "oh no" sound
-//                    var audio = resources.getIdentifier("oh_no", "raw", packageName)
-//                    var mediaPlayer_start = MediaPlayer.create(this, audio)
-//                    if (mediaPlayer_start.isPlaying()) {
-//                        mediaPlayer_start.stop();
-//                        mediaPlayer_start.start();
-//                    } else {
-//                        mediaPlayer_start.start();
-//                    }
-//                    mediaPlayer_start.release()
                 }
 
                 var isCorrect = true
@@ -166,6 +160,9 @@ class LetterGameActivityScreen : AppCompatActivity() {
 
                 // if correctly selected all letters
                 if (isCorrect) {
+
+                    mediaPlayer_wrong.stop()
+
                     for (i in letterPositions) {
                         i.setBackgroundResource(R.drawable.letter_spot_blue)
                         confetti.visibility = View.VISIBLE
