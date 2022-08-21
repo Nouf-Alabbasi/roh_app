@@ -1,10 +1,12 @@
 package com.LthuteLeNna.myapplication
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 
 class LetterGameHomeScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,5 +31,22 @@ class LetterGameHomeScreen : AppCompatActivity() {
         infoButton.setOnClickListener {
             startActivity(Intent(this, LetterGameInstructionScreen::class.java))
         }
+
+        //audio obtained from the drive 1.Instructions.m4a
+        var audio = resources.getIdentifier("letterhuntinst", "raw", packageName)
+        var mediaPlayer = MediaPlayer.create(this, audio);
+        mediaPlayer.start()
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.imageView10)
+        repeat_inst.setOnClickListener {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop()
+            }
+            var audio = resources.getIdentifier("letterhuntinst", "raw", packageName)
+            var mediaPlayer = MediaPlayer.create(this, audio);
+            mediaPlayer.start()
+        }
+        //replay audio
     }
 }

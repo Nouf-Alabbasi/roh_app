@@ -96,6 +96,16 @@ class CowGameLevelTwo : AppCompatActivity() {
             var mediaPlayer_left = MediaPlayer.create(this, R.raw.left);
             mediaPlayer_left.start();
 
+//            //replay audio
+//            var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+//            repeat_inst.setOnClickListener {
+//                if (mediaPlayer_start.isPlaying()) {
+//                    mediaPlayer_start.stop()
+//                }
+//                mediaPlayer_start.start()
+//            }
+//            //replay audio
+
             instructionText.text = "How many cows are left?"
             instructionText.visibility = View.VISIBLE
             confettiGif.visibility = View.INVISIBLE

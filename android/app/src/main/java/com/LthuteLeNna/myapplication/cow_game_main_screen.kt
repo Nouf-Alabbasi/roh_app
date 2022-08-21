@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 
 class cow_game_main_screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +15,18 @@ class cow_game_main_screen : AppCompatActivity() {
 
         var player = MediaPlayer.create(this, R.raw.cow_0);
         player.start();
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.imageView)
+        repeat_inst.setOnClickListener {
+            if (player.isPlaying()) {
+                player.stop()
+            }
+
+            var player = MediaPlayer.create(this, R.raw.cow_0);
+            player.start()
+        }
+        //replay audio
 
         try{
             supportActionBar?.hide()
@@ -36,6 +49,7 @@ class cow_game_main_screen : AppCompatActivity() {
             if (player.isPlaying()) player.stop()
             startActivity(Intent(this@cow_game_main_screen, cowGameInstruction::class.java))
         }
+
 
 
     }

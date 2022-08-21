@@ -1,10 +1,12 @@
 package com.LthuteLeNna.myapplication
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 
 class WordsMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,5 +32,21 @@ class WordsMain : AppCompatActivity() {
 //            if (player.isPlaying()) player.stop()
             startActivity(Intent(this, imagineTimeInstructionScreen::class.java))
         }
+
+        // add audio
+        var audio = resources.getIdentifier("imaginetimeinst", "raw", packageName)
+        var mediaPlayer = MediaPlayer.create(this, audio)
+        mediaPlayer.start()
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+        repeat_inst.setOnClickListener {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop()
+            }
+            mediaPlayer.start()
+        }
+        //replay audio
+
     }
 }

@@ -52,6 +52,19 @@ class CowGameLevelOne : AppCompatActivity() {
 
             mediaPlayer_start.start();
 
+            //replay audio
+            var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+            repeat_inst.setOnClickListener {
+                if (mediaPlayer_start.isPlaying()) {
+                    mediaPlayer_start.stop()
+                }
+
+                var audio = resources.getIdentifier("find${numCowsToFind}", "raw", packageName);
+                var mediaPlayer_start = MediaPlayer.create(this, audio)
+                mediaPlayer_start.start()
+            }
+            //replay audio
+
             babyCowPositions.clear()
             babyCowFoundPositions.clear()
 

@@ -176,6 +176,16 @@ class ReadyGameLevel2 : AppCompatActivity() {
 
                         mediaPlayer.start()
 
+                        //replay audio
+                        var repeat_inst = findViewById<ImageView>(R.id.imageView27)
+                        repeat_inst.setOnClickListener {
+                            if (mediaPlayer.isPlaying()) {
+                                mediaPlayer.stop()
+                            }
+                            mediaPlayer.start()
+                        }
+                        //replay audio
+
                     }
                 }
             }
@@ -215,6 +225,7 @@ class ReadyGameLevel2 : AppCompatActivity() {
                                     switchModeToBottom()
                                 })
                             }).start()
+
                         }
 
                     } catch(e: Exception) {
@@ -223,5 +234,6 @@ class ReadyGameLevel2 : AppCompatActivity() {
                 }
             }
         }
+
     }
 }

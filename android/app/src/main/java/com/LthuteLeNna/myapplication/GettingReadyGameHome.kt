@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import java.lang.Exception
 
 class GettingReadyGameHome : AppCompatActivity() {
@@ -16,6 +17,21 @@ class GettingReadyGameHome : AppCompatActivity() {
         var audio = resources.getIdentifier("help_get_ready", "raw", packageName)
         var mediaPlayer = MediaPlayer.create(this, audio)
         mediaPlayer.start()
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.homeScreenGirl)
+        repeat_inst.setOnClickListener {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop()
+            }
+
+            var audio = resources.getIdentifier("help_get_ready", "raw", packageName)
+            var mediaPlayer = MediaPlayer.create(this, audio)
+
+            mediaPlayer.start()
+        }
+        //replay audio
+
 
         try {
             supportActionBar?.hide()
