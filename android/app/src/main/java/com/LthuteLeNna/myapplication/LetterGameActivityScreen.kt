@@ -32,7 +32,7 @@ class LetterGameActivityScreen : AppCompatActivity() {
         var wonImageTop = findViewById<ImageView>(R.id.wonImageTop)
         var wonImageBottom = findViewById<ImageView>(R.id.wonImageBottom)
 
-        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
+        var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
         var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
 
         wonImageTop.visibility = View.INVISIBLE
@@ -63,6 +63,24 @@ class LetterGameActivityScreen : AppCompatActivity() {
         var selectedWord = listOfWords[Random.nextInt(listOfWords.size)]
 
         letterOptions.shuffle()
+
+        var Theword = resources.getIdentifier(selectedWord, "raw", packageName);
+        var mediaPlayer_word = MediaPlayer.create(this, Theword)
+
+        mediaPlayer_word.start();
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+        repeat_inst.setOnClickListener {
+            if (mediaPlayer_word.isPlaying()) {
+                mediaPlayer_word.stop()
+            }
+
+            var Theword = resources.getIdentifier(selectedWord, "raw", packageName);
+            var mediaPlayer_word = MediaPlayer.create(this, Theword)
+            mediaPlayer_word.start()
+        }
+        //replay audio
 
         for (i in 0..4) {
             if (i<3) {

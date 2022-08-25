@@ -56,7 +56,7 @@ class ReadyGameLevel1 : AppCompatActivity() {
         var mediaPlayer = MediaPlayer.create(this, audio);
 
         // audio wrong answer
-        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
+        var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
         var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
 
 

@@ -33,12 +33,12 @@ class CowGameLevelTwo : AppCompatActivity() {
         val instructionText: TextView = findViewById(R.id.cGameL2_instructionText)
         val numCowsLeftAfterGame: TextView = findViewById(R.id.foundCowsNumber) as TextView
 
-        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
-        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
-//        var goToHomeButton = findViewById<ImageButton>(R.id.goToCountingGameMain2)
-//        goToHomeButton.setOnClickListener {
-//            startActivity(Intent(this, Home::class.java))
-//        }
+//        var audio_wrong = resources.getIdentifier("d", "raw", packageName)
+//        var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+////        var goToHomeButton = findViewById<ImageButton>(R.id.goToCountingGameMain2)
+////        goToHomeButton.setOnClickListener {
+////            startActivity(Intent(this, Home::class.java))
+////        }
 
         var practiceButton = findViewById<ImageButton>(R.id.cowGameLevel2Practice)
         practiceButton.setOnClickListener {
@@ -70,6 +70,25 @@ class CowGameLevelTwo : AppCompatActivity() {
 
         var numCowsPutInTruck = 0
 
+//        var audio = resources.getIdentifier("babies{numCowsToSelectInTruck}", "raw", packageName);
+//        var mediaPlayer_start = MediaPlayer.create(this, audio)
+//
+//        mediaPlayer_start.start();
+//
+//        //replay audio
+//        var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+//        repeat_inst.setOnClickListener {
+//            if (mediaPlayer_start.isPlaying()) {
+//                mediaPlayer_start.stop()
+//            }
+//
+//            var audio = resources.getIdentifier("babies{numCowsToSelectInTruck}", "raw", packageName);
+//            var mediaPlayer_start = MediaPlayer.create(this, audio)
+//            mediaPlayer_start.start()
+//        }
+//        //replay audio
+
+
         var cowsInTruck: MutableList<ImageView> = mutableListOf<ImageView>()
         for (i in 1..10) {
             val viewId: String = "cGameL2_cowInTruck${i}"
@@ -93,18 +112,26 @@ class CowGameLevelTwo : AppCompatActivity() {
                 startActivity(Intent(this, CowGameLevelTwo::class.java))
             }
 
-            var mediaPlayer_left = MediaPlayer.create(this, R.raw.left);
-            mediaPlayer_left.start();
+//            var mediaPlayer_left = MediaPlayer.create(this, R.raw.left);
+//            mediaPlayer_left.start();
 
-//            //replay audio
-//            var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
-//            repeat_inst.setOnClickListener {
-//                if (mediaPlayer_start.isPlaying()) {
-//                    mediaPlayer_start.stop()
-//                }
-//                mediaPlayer_start.start()
-//            }
-//            //replay audio
+
+            var audio = resources.getIdentifier("how_many_babies_are_left_", "raw", packageName);
+            var mediaPlayer_G2 = MediaPlayer.create(this, audio)
+            mediaPlayer_G2.start()
+
+            //replay audio
+            var repeat_inst = findViewById<ImageView>(R.id.imageView15)
+            repeat_inst.setOnClickListener {
+                if (mediaPlayer_G2.isPlaying()) {
+                    mediaPlayer_G2.stop()
+                }
+
+                var audio = resources.getIdentifier("how_many_babies_are_left_", "raw", packageName);
+                var mediaPlayer_G2 = MediaPlayer.create(this, audio)
+                mediaPlayer_G2.start()
+            }
+            //replay audio
 
             instructionText.text = "How many cows are left?"
             instructionText.visibility = View.VISIBLE
@@ -135,7 +162,8 @@ class CowGameLevelTwo : AppCompatActivity() {
                         var audioNum = resources.getIdentifier("num${selectNumList[i].text}", "raw", packageName)
                         var audioNumMediaPlayer = MediaPlayer.create(this, audioNum);
 
-                        if (mediaPlayer_left.isPlaying()) mediaPlayer_left.stop()
+//                        if (mediaPlayer_left.isPlaying()) mediaPlayer_left.stop()
+                        if (mediaPlayer_G2.isPlaying()) mediaPlayer_G2.stop()
 
                         audioNumMediaPlayer.start()
 
@@ -181,6 +209,12 @@ class CowGameLevelTwo : AppCompatActivity() {
                             })
                         }).start()
                     }
+                }
+                else{
+                    // audio wrong answer
+                    var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
+                    var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+                    mediaPlayer_wrong.start()
                 }
             }
         }
