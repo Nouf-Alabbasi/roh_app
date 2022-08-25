@@ -74,6 +74,20 @@ class ReadyGameLevel1 : AppCompatActivity() {
         }
 
         mediaPlayer = MediaPlayer.create(this, audio);
+        mediaPlayer.start()
+
+        //replay audio
+        var repeat_inst = findViewById<ImageView>(R.id.imageView24)
+        repeat_inst.setOnClickListener {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop()
+            }
+
+            //var audio = resources.getIdentifier("how_many_babies_are_left_", "raw", packageName);
+            var mediaPlayer = MediaPlayer.create(this, audio)
+            mediaPlayer.start()
+        }
+        //replay audio
 
         var instructionText = findViewById<TextView>(R.id.readyGameInstruction)
 
