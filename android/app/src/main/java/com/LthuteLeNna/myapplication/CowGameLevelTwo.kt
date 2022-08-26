@@ -1,3 +1,10 @@
+// ##I think this text goes here
+
+//// audio wrong answer
+//var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
+//var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+//mediaPlayer_wrong.start()
+
 package com.LthuteLeNna.myapplication
 
 import android.content.Intent
@@ -148,10 +155,12 @@ class CowGameLevelTwo : AppCompatActivity() {
             val randomInd = Random.nextInt(0,2)
             var options = mutableListOf<Int>()
             for (i in 0..2) {
+                // if it is the correct answer's position
                 if (i == randomInd) {
                     selectNumList[i].text = (numCowsToDisplay - numCowsToSelectInTruck).toString()
                     options.add(numCowsToDisplay - numCowsToSelectInTruck)
                     selectNumList[i].setOnClickListener {
+
                         confettiGif.visibility = View.VISIBLE
                         numCowsLeftAfterGame.visibility = View.VISIBLE
                         selectNumList[i].setOnClickListener { null }
@@ -184,6 +193,16 @@ class CowGameLevelTwo : AppCompatActivity() {
                         randomNum = Random.nextInt(1,10)
                     }
                     selectNumList[i].text = randomNum.toString()
+
+                    selectNumList[i].setOnClickListener {
+                        // audio wrong answer
+                        try {
+                            var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
+                            var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+                            mediaPlayer_wrong.start()
+                        } catch (e: Exception){}
+                    }
+
                 }
                 selectNumList[i].visibility = View.VISIBLE
             }
@@ -209,12 +228,6 @@ class CowGameLevelTwo : AppCompatActivity() {
                             })
                         }).start()
                     }
-                }
-                else{
-                    // audio wrong answer
-                    var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
-                    var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
-                    mediaPlayer_wrong.start()
                 }
             }
         }

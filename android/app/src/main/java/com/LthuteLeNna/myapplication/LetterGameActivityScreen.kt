@@ -70,11 +70,11 @@ class LetterGameActivityScreen : AppCompatActivity() {
         mediaPlayer_word.start();
 
         //replay audio
-        var repeat_inst = findViewById<ImageView>(R.id.MamaCow)
+        var repeat_inst = findViewById<ImageView>(R.id.girl)
         repeat_inst.setOnClickListener {
-            if (mediaPlayer_word.isPlaying()) {
-                mediaPlayer_word.stop()
-            }
+//            if (mediaPlayer_word.isPlaying()) {
+            mediaPlayer_word.stop()
+//            }
 
             var Theword = resources.getIdentifier(selectedWord, "raw", packageName);
             var mediaPlayer_word = MediaPlayer.create(this, Theword)

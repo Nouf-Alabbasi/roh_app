@@ -33,11 +33,11 @@ class ReadyGameLevel2 : AppCompatActivity() {
         }
 
         // shirts
-        var shirtsColorsShapes: MutableList<String> = mutableListOf("blue_circle", "green_circle", "green_diamond", "pink_heart", "pink_triangle", "yellow_star")
+        var shirtsColorsShapes: MutableList<String> = mutableListOf("blue_circle", "green_circle", "pink_triangle") //audio not available "green_diamond", "pink_heart","yellow_star"
 
         // pants
-        var shortsColors: MutableList<String> = mutableListOf("blue", "green", "orange", "pink", "red", "white", "yellow")
-        var pantsColors: MutableList<String> = mutableListOf("blue", "green", "pink", "purple", "yellow")
+        var shortsColors: MutableList<String> = mutableListOf("blue", "green", "orange", "pink", "white", "yellow") //audio not available "red"
+        var pantsColors: MutableList<String> = mutableListOf("blue", "green", "purple", "yellow") //audio not available "pink"
 
         var confetti = findViewById<GifImageView>(R.id.readyGameConfetti)
         confetti.visibility = View.INVISIBLE
@@ -76,6 +76,26 @@ class ReadyGameLevel2 : AppCompatActivity() {
                 shirtDrawableName = "tshirt_${correctOption}"
                 shirtsColorsShapes.remove(correctOption)
                 tag = correctOption
+
+                //play instructions
+                var inst = resources.getIdentifier(shirtDrawableName, "raw", packageName)
+                var mediaPlayerinst = MediaPlayer.create(this, inst)
+
+                mediaPlayerinst.start();
+
+                //replay audio
+                var repeat_inst = findViewById<ImageView>(R.id.imageView27)
+                repeat_inst.setOnClickListener {
+//            if (mediaPlayer_word.isPlaying()) {
+                    mediaPlayerinst.stop()
+//            }
+
+                    var inst = resources.getIdentifier(shirtDrawableName, "raw", packageName);
+                    var mediaPlayerinst = MediaPlayer.create(this, inst)
+                    mediaPlayerinst.start()
+                }
+                //replay audio
+
             } else {
                 random = Random.nextInt(shirtsColorsShapes.size)
                 var option = shirtsColorsShapes[random]
@@ -100,27 +120,23 @@ class ReadyGameLevel2 : AppCompatActivity() {
                 correctOption = shortsColors[random]
                 instruction.text = "Put a ${correctOption} shorts on Bontle"
 
-                //#######
-                //                    bottomDrawableName = "shorts_${i.tag}"
-                var audio = resources.getIdentifier("oh_no", "raw", packageName)
+                //play instructions
+                var shorts = "shorts_${correctOption}"
+                var inst = resources.getIdentifier(shorts, "raw", packageName)
+                var mediaPlayerinst = MediaPlayer.create(this, inst)
 
-//                        var audio = resources.getIdentifier("${i.tag}_shorts", "raw", packageName)
-                var mediaPlayer = MediaPlayer.create(this, audio)
-                mediaPlayer.start()
-                //#######
+                mediaPlayerinst.start();
+
             } else {
                 random = Random.nextInt(pantsColors.size)
                 correctOption = pantsColors[random]
                 instruction.text = "Put a ${correctOption} pants on Bontle"
-                
-                //#######
-                //                    bottomDrawableName = "shorts_${i.tag}"
-                var audio = resources.getIdentifier("oh_no", "raw", packageName)
+                //play instructions
+                var pants = "shorts_${correctOption}"
+                var inst = resources.getIdentifier(pants, "raw", packageName)
+                var mediaPlayerinst = MediaPlayer.create(this, inst)
 
-//                        var audio = resources.getIdentifier("${i.tag}_shorts", "raw", packageName)
-                var mediaPlayer = MediaPlayer.create(this, audio)
-                mediaPlayer.start()
-                //#######
+                mediaPlayerinst.start();
             }
 
             for (i in 0..2) {
@@ -157,29 +173,10 @@ class ReadyGameLevel2 : AppCompatActivity() {
 
             clothesOption.shuffle()
 
-            //#########################
-//            var bottomDrawableName = ""
-//            if (bottomMode == 0) {
-////                    bottomDrawableName = "shorts_${i.tag}"
-//                var audio = resources.getIdentifier("oh_no", "raw", packageName)
-//
-////                        var audio = resources.getIdentifier("${i.tag}_shorts", "raw", packageName)
-//                var mediaPlayer = MediaPlayer.create(this, audio)
-//                mediaPlayer.start()
-//            } else {
-////                    bottomDrawableName = "pants_${i.tag}"
-//                var audio = resources.getIdentifier("oh_no", "raw", packageName)
-////                        var audio = resources.getIdentifier("${i.tag}_pants", "raw", packageName)
-//                var mediaPlayer = MediaPlayer.create(this, audio)
-//                mediaPlayer.start()
-//            }
-            //#########################
             for (i in clothesOption) {
                 i.visibility = View.VISIBLE
                 i.setOnClickListener {
                     if (i.tag == correctOption) {
-                        i.visibility = View.INVISIBLE
-
                         var audio = resources.getIdentifier("${i.tag}_shorts", "raw", packageName)
 
                         var bottomDrawableName = ""
@@ -210,17 +207,11 @@ class ReadyGameLevel2 : AppCompatActivity() {
                         }
 
                         mediaPlayer.start()
-
-//                        //replay audio
-//                        var repeat_inst = findViewById<ImageView>(R.id.imageView27)
-//                        repeat_inst.setOnClickListener {
-//                            if (mediaPlayer.isPlaying()) {
-//                                mediaPlayer.stop()
-//                            }
-//                            mediaPlayer.start()
-//                        }
-//                        //replay audio
-
+                    }
+                    else{
+                        var audio_wrongs = resources.getIdentifier("oh_no", "raw", packageName)
+                        var mediaPlayer_wrongs = MediaPlayer.create(this, audio_wrongs)
+                        mediaPlayer_wrongs.start()
                     }
                 }
             }
@@ -229,6 +220,7 @@ class ReadyGameLevel2 : AppCompatActivity() {
         // set listeners
         for (i in clothesOption) {
             i.setOnClickListener {
+
                 if (i.tag == correctOption) {
                     var resourceName = "tshirt_${i.tag}"
                     var resource = resources.getIdentifier(resourceName, "drawable", packageName)
@@ -266,6 +258,11 @@ class ReadyGameLevel2 : AppCompatActivity() {
                     } catch(e: Exception) {
                         switchModeToBottom()
                     }
+                }
+                else{
+                    var audio_wrong = resources.getIdentifier("oh_no", "raw", packageName)
+                    var mediaPlayer_wrong = MediaPlayer.create(this, audio_wrong)
+                    mediaPlayer_wrong.start()
                 }
             }
         }
