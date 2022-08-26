@@ -101,6 +101,10 @@ class CowGameLevelOne : AppCompatActivity() {
                         confetti.visibility = View.VISIBLE
                         wonText.visibility = View.VISIBLE
 
+                        var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                        var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                        mediaPlayer_yayyy.start()
+
                         var foundAudio = resources.getIdentifier("num${numCowsToFind}", "raw", packageName);
                         var mediaPlayer_found = MediaPlayer.create(this, foundAudio)
                         if (mediaPlayer_start.isPlaying()) mediaPlayer_start.stop()

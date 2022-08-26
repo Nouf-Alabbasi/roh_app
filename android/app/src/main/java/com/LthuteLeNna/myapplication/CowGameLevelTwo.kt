@@ -168,6 +168,10 @@ class CowGameLevelTwo : AppCompatActivity() {
                             i.visibility = View.INVISIBLE
                         }
 
+                        var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                        var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                        mediaPlayer_yayyy.start()
+
                         var audioNum = resources.getIdentifier("num${selectNumList[i].text}", "raw", packageName)
                         var audioNumMediaPlayer = MediaPlayer.create(this, audioNum);
 
