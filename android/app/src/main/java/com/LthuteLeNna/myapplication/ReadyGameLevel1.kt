@@ -105,6 +105,10 @@ class ReadyGameLevel1 : AppCompatActivity() {
                     i.visibility = View.INVISIBLE
                     confetti.visibility = View.VISIBLE
 
+                    var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                    var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                    mediaPlayer_yayyy.start()
+
                     mediaPlayer_wrong.stop()
                     try {
                         if (mediaPlayer.isPlaying()) {

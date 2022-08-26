@@ -224,6 +224,11 @@ class CowGameLevelTwo : AppCompatActivity() {
                     instructionText.visibility = View.INVISIBLE
                     removeOnClickListeners()
                     confettiGif.visibility = View.VISIBLE
+
+                    var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                    var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                    mediaPlayer_yayyy.start()
+
                     var timer = Timer("schedule", true)
                     timer.schedule(4000){
                         Thread(Runnable {

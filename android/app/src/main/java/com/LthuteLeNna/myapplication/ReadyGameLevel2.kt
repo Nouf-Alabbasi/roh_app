@@ -194,6 +194,10 @@ class ReadyGameLevel2 : AppCompatActivity() {
 
                         confetti.visibility = View.VISIBLE
 
+                        var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                        var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                        mediaPlayer_yayyy.start()
+
 
                         var mediaPlayer = MediaPlayer.create(this, audio)
 
