@@ -64,10 +64,11 @@ class LetterGameActivityScreen : AppCompatActivity() {
 
         letterOptions.shuffle()
 
+
         var Theword = resources.getIdentifier(selectedWord, "raw", packageName);
         var mediaPlayer_word = MediaPlayer.create(this, Theword)
 
-        mediaPlayer_word.start();
+//        mediaPlayer_word.start();
 
         //replay audio
         var repeat_inst = findViewById<ImageView>(R.id.girl)
@@ -184,6 +185,11 @@ class LetterGameActivityScreen : AppCompatActivity() {
                     for (i in letterPositions) {
                         i.setBackgroundResource(R.drawable.letter_spot_blue)
                         confetti.visibility = View.VISIBLE
+
+                        var audio_yayyy = resources.getIdentifier("yayyy", "raw", packageName);
+                        var mediaPlayer_yayyy = MediaPlayer.create(this, audio_yayyy)
+                        mediaPlayer_yayyy.start()
+
                         displayWonImage(selectedWord)
                         for (j in letterOptions) {
                             j.setOnClickListener { null }
