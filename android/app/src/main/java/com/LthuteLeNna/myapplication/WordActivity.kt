@@ -30,16 +30,16 @@ class WordActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        var level1Characters: MutableList<String> = mutableListOf("lion", "cat", "dog", "cow", "boy", "girl", "monkey", "elephant", "chicken", "ant")
-        var level1Objects:  MutableList<String> = mutableListOf("hat", "bag", "doll", "teddy bear", "bowl", "soap", "tap", "chair", "book")
+        var level1Characters: MutableList<String> = mutableListOf("lion") //, "cat", "dog", "cow", "boy", "girl", "monkey", "elephant", "chicken", "ant")
+        var level1Objects:  MutableList<String> = mutableListOf("hat")//, "bag", "doll", "teddy bear", "bowl", "soap", "tap", "chair", "book")
 
-        var level2Places: MutableList<String> = mutableListOf("village", "school", "hospital", "house", "bush", "garden", "river", "tuck shop", "church")
-        var level2Activities: MutableList<String> =  mutableListOf("running", "jumping", "eating", "bathing", "dancing", "sleeping", "reading", "playing", "singing", "shopping")
+        var level2Places: MutableList<String> = mutableListOf("village")//, "school", "hospital", "house", "bush", "garden", "river", "tuck shop", "church")
+        var level2Activities: MutableList<String> =  mutableListOf("running")//, "jumping", "eating", "bathing", "dancing", "sleeping", "reading", "playing", "singing", "shopping")
 
-        var level3Characters: MutableList<String> =  mutableListOf("grandfather", "grandmother", "baby", "fish", "bird", "butterfly", "mother", "father", "rhino")
-        var level3Places: MutableList<String> =  mutableListOf("road", "mountain", "kitchen", "toilet", "desert", "playground", "sand pit")
-        var level3Objects: MutableList<String> =  mutableListOf("pencil", "eraser", "notebook", "socks", "dress", "paper", "shoes", "fork", "spoon")
-        var level3Activities: MutableList<String> =  mutableListOf("crying", "listening", "walking", "sharing", "laughing", "drawing")
+        var level3Characters: MutableList<String> =  mutableListOf("grandfather")//, "grandmother", "baby", "fish", "bird", "butterfly", "mother", "father", "rhino")
+        var level3Places: MutableList<String> =  mutableListOf("road")//, "mountain", "kitchen", "toilet", "desert", "playground", "sand pit")
+        var level3Objects: MutableList<String> =  mutableListOf("pencil")//, "eraser", "notebook", "socks", "dress", "paper", "shoes", "fork", "spoon")
+        var level3Activities: MutableList<String> =  mutableListOf("crying")//, "listening", "walking", "sharing", "laughing", "drawing")
 
         var randomIndex = 0
         var category: String =  intent.getStringExtra("wordSet").toString()
@@ -79,7 +79,10 @@ class WordActivity : AppCompatActivity() {
 
         }
 
-        var audio = resources.getIdentifier(randomWord, "raw", packageName);
+//        var TheAudio = "word_${randomWord.split(" ").joinToString("_")}"
+        var TheAudio = "${randomWord.split(" ").joinToString("_")}"
+
+        var audio = resources.getIdentifier(TheAudio, "raw", packageName);
 
         var drawableName = "word_${randomWord.split(" ").joinToString("_")}"
         randomWord = randomWord[0].uppercase() + randomWord.substring(1)
