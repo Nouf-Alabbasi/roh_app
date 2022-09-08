@@ -15,7 +15,7 @@ class Words_Level_1_Categories : AppCompatActivity() {
             supportActionBar?.hide()
         } catch (e: Exception) {}
 
-        var goToGameMain = findViewById<ImageButton>(R.id.goToImagineGameMain3)
+        var goToGameMain = findViewById<ImageButton>(R.id.goToImagineGameMain1)
         goToGameMain.setOnClickListener {
             startActivity(Intent(this, WordsMain::class.java))
         }
