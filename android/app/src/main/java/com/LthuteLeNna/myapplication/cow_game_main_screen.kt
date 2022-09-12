@@ -34,19 +34,22 @@ class cow_game_main_screen : AppCompatActivity() {
 
         var startButton = findViewById<Button>(R.id.cowGameStartButton) as Button
         startButton.setOnClickListener{
-            if (player.isPlaying()) player.stop()
+//            if (player.isPlaying()) player.stop()
+            player.stop()
             startActivity(Intent(this@cow_game_main_screen, cow_game_numbers_screen::class.java))
         }
 
         var menuButton = findViewById<ImageButton>(R.id.goToCountingGameMain) as ImageButton
         menuButton.setOnClickListener{
-            if (player.isPlaying()) player.stop()
+//            if (player.isPlaying())
+            player.stop()
             startActivity(Intent(this@cow_game_main_screen, Menu::class.java))
         }
 
         var infoButton = findViewById<ImageButton>(R.id.infoIconCowGame) as ImageButton
         infoButton.setOnClickListener{
-            if (player.isPlaying()) player.stop()
+//            if (player.isPlaying()) player.stop()
+            player.stop()
             startActivity(Intent(this@cow_game_main_screen, cowGameInstruction::class.java))
         }
 

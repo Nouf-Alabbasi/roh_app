@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.LthuteLeNna.myapplication">
 
     <application
@@ -9,6 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".one_one"
+            android:exported="false"
+            android:label="@string/title_activity_one_one"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.MyApplication.NoActionBar"
+            tools:targetApi="24" />
         <activity
             android:name=".readyGameInstructionScreen"
             android:exported="false" />

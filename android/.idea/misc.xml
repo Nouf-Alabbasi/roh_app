@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/layout-sw600dp/activity_letter_hunt_letters_screen.xml" value="0.34367396593673966" />
         <entry key="app/src/main/res/layout-sw600dp/activity_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level1.xml" value="0.4316702819956616" />
-        <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level2.xml" value="0.11067708333333333" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_ready_game_level2.xml" value="0.2823343848580442" />
         <entry key="app/src/main/res/layout/activity_colors_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_cow_game_instruction.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_cow_game_level_one.xml" value="0.25845000354956227" />
@@ -36,6 +36,12 @@
         <entry key="app/src/main/res/layout/activity_words_level1_categories.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_words_level2_categories.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_words_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/content_one_one.xml" value="0.10435663627152988" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ready_game_level_2.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/menu/overflow.xml" value="0.21458333333333332" />
       </map>
     </option>
   </component>

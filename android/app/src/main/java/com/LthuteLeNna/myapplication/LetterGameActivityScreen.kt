@@ -199,12 +199,12 @@ class LetterGameActivityScreen : AppCompatActivity() {
                         var audio = resources.getIdentifier(selectedWord, "raw", packageName);
                         var mediaPlayer = MediaPlayer.create(this, audio)
 
-                        if (mediaPlayer.isPlaying()) {
-                            mediaPlayer.stop();
-                            mediaPlayer.start();
-                        } else {
-                            mediaPlayer.start();
-                        }
+//                        if (mediaPlayer.isPlaying()) {
+//                            mediaPlayer.stop();
+//                            mediaPlayer.start();
+//                        } else {
+//                            mediaPlayer.start();
+//                        }
 //                        mediaPlayer.release()
 
                         mediaPlayer.setOnCompletionListener {
@@ -213,6 +213,7 @@ class LetterGameActivityScreen : AppCompatActivity() {
                                 startActivity(Intent(this@LetterGameActivityScreen, LetterGameActivityScreen::class.java))
                             }
                         }
+                        mediaPlayer.start();
 
                     }
                 } else {
