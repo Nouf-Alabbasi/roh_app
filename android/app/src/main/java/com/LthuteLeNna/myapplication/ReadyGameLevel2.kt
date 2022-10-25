@@ -33,11 +33,11 @@ class ReadyGameLevel2 : AppCompatActivity() {
         }
 
         // shirts
-        var shirtsColorsShapes: MutableList<String> = mutableListOf("blue_circle", "green_circle", "pink_triangle") //audio not available "green_diamond", "pink_heart","yellow_star"
+        var shirtsColorsShapes: MutableList<String> = mutableListOf("blue_circle", "green_circle", "pink_triangle","green_diamond","yellow_star" ) //audio not available "pink_heart"
 
         // pants
-        var shortsColors: MutableList<String> = mutableListOf("blue", "green", "orange", "pink", "white", "yellow") //audio not available "red"
-        var pantsColors: MutableList<String> = mutableListOf("blue", "green", "purple", "yellow") //audio not available "pink"
+        var shortsColors: MutableList<String> = mutableListOf("blue", "green", "orange", "pink", "white", "yellow", "red")
+        var pantsColors: MutableList<String> = mutableListOf("blue", "green", "purple", "yellow", "pink")
 
         var confetti = findViewById<GifImageView>(R.id.readyGameConfetti)
         confetti.visibility = View.INVISIBLE

@@ -12,20 +12,20 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".one_one"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_one_one"
             android:resizeableActivity="true"
             android:theme="@style/Theme.MyApplication.NoActionBar"
             tools:targetApi="24" />
         <activity
             android:name=".readyGameInstructionScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".imagineTimeInstructionScreen"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".cowGameInstruction"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".WordLevel3Categories" />
         <activity android:name=".WordsLevel2Categories" />
         <activity android:name=".WordActivity" />
